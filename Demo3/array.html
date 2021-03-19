@@ -24,10 +24,23 @@
         for (i = 0; i < numbers.length; i++) {
             tong += numbers[i]
         }
-        document.write(tong)
+        // document.write(tong)
         console.log(tong)
 
         console.log(typeof (numbers))
+        console.log('---sx-----')
+        numbers.sort()
+        for (i = 0; i < numbers.length; i++) {
+            console.log(numbers[i])
+        }
+        var s = new Array("đ","a","z");
+        // s.sort()
+        s.sort(function compare(a,b){
+            return a - b;
+        })
+        for (i = 0; i < s.length; i++) {
+            console.log(s[i])
+        }
 
         numbers.push(10) // thêm phần tử vào cuối
         console.log('--------')
@@ -50,6 +63,7 @@
         for (i = 0; i < numbersConcat.length; i++) {
             console.log(numbersConcat[i])
         }
+        
     </script>
 </body>
 

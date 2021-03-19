@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        var tuoi = new Array();
+        var size = prompt("Mời nhập số: ")
+        Number(size)
+        for(i = 0; i < size; i++){
+            tuoi[i]= prompt("Nhập ng: " + (i+1))
+        }
+        tuoi.sort(function compate(a,b){
+            return a -b;
+        });
+        for (i = 0; i < size; i++) {
+            console.log(tuoi[i])
+        }
+    </script>
+    <!-- a: <input type="text" id="a" value="" onkeyup="tinh()"/>
+    b: <input type="text" id="b" value="" onkeyup="tinh()"/>
+    Kết quả: <input type="text" id="result" value=""/> -->
 </body>
+
 </html>
