@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Document</title>
+</head>
+<body>
+    <script>
+        var numbers = [1,4,5,2]
+        //var n = [1, "string", 12.3] không nên
+
+        console.log(numbers[0])
+        console.log (numbers.length)
+        console.log(numbers[numbers.length - 1])
+
+        var tong = numbers[0] + numbers[1] + numbers[2] + numbers[3]
+        console.log(tong)
+
+        for(i = 0; i< numbers.length; i++){
+            tong += numbers[i]
+        }
+        console.log(tong)
+
+        console.log(typeof(numbers))
+
+        numbers.push(10)// thêm phần tử vào cuối
+        for(i = 0; i< numbers.length; i++){
+            console.log(numbers[i])
+        }
+        numbers.splice(1,2)// xóa phần tử tại index
+        numbers.pop()// xóa phần tử cuối
+        console.log('--------')
+        for(i = 0; i< numbers.length; i++){
+            console.log(numbers[i])
+        }
+        console.log('--------')
+        var numbersConcat = numbers.concat([1,1,1,1])
+        for(i = 0; i< numbersConcat.length; i++){
+            console.log(numbersConcat[i])
+        }
+        
+    </script>
+</body>
+</html>
