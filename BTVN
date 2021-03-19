@@ -6,4 +6,10 @@ Tạo button -> click show giá trị làm tròn của vòng 1
 Nhập n họ và tên cờ rút 
 -> in ra tên (in hoa)
 
-3. 
+3. Nhập vào tuổi của gđ.
+sắp xếp -> hiển thị tuổi gđ từ bé -> lớn
+
+4. Cho 1 mảng tên bạn gái hiện tại:
+XS tên từ z -> a -> hiển thị
+Thêm tên bạn Ong và vị trí đầu tiên -> hiển thị
+Xóa đi 2 bạn ở vị trí thứ 2 từ dưới lên
