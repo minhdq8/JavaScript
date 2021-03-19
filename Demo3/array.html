@@ -10,19 +10,20 @@
 
 <body>
     <script>
-        var numbers = [1, 4, 5, 2]
+        var numbers = [1, 4, 5, 2];
         //var n = [1, "string", 12.3] không nên
 
         console.log(numbers[0])
         console.log(numbers.length)
         console.log(numbers[numbers.length - 1])
 
-        var tong = numbers[0] + numbers[1] + numbers[2] + numbers[3]
-        console.log(tong)
-
+        // var tong = numbers[0] + numbers[1] + numbers[2] + numbers[3]
+        // console.log(tong)
+        var tong = 0;
         for (i = 0; i < numbers.length; i++) {
             tong += numbers[i]
         }
+        document.write(tong)
         console.log(tong)
 
         console.log(typeof (numbers))
