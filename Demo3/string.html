@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s = "Tôi là Minh"
+        var s1 = "JS khó voãi aa"
+
+        var chuoi = s + s1
+        console.log(chuoi.length)
+        var index = chuoi.indexOf("chán")//-1: ko tìm thấy;
+        //index nếu thấy;tìm từ đầu->cuối
+        console.log(index)
+        var lastId = chuoi.lastIndexOf("JS")// từ cuối -> đầu
+        console.log(lastId)
+
+        var sub1 = chuoi.substr(1,3)
+        console.log(sub1)
+        var sub2 = chuoi.substring(0,2)// tương tự slice
+        console.log(sub2)
+        // convert string -> array
+        var arrayStr = chuoi.split(" ")
+        for(i = 0; i < 1; i++){
+            console.log(arrayStr)
+        }
+        // replace
+        var sReplace = chuoi.replace("khó", "khó cực")
+        console.log(chuoi)
+        console.log(sReplace)
+
+    </script>
+</body>
+</html>

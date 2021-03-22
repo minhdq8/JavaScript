@@ -13,3 +13,21 @@ sắp xếp -> hiển thị tuổi gđ từ bé -> lớn
 XS tên từ z -> a -> hiển thị
 Thêm tên bạn Ong và vị trí đầu tiên -> hiển thị
 Xóa đi 2 bạn tính từ vị trí thứ 2 từ dưới lên
+
+5. Khai báo 2 biến a, b và nhập giá trị cho nó từ bàn phím
+- với mỗi phép tính cộng, trừ, nhân, chia chúng ta sẽ tạo ra 1 hàm riêng và thực hiện phép tính, 
+sau đó log ra giá trị của a, b và kết quả của 4 phép tính
+
+6.
+- Viết mã javascript để nhập vào số dương từ bàn phím
+- kiểm tra số vừa nhập vào là số chẵn hay số lẻ
+- nếu số vừa nhập vào là số chẵn, chương trình tiếp tục chạy và log ra số nhập vào
+- nếu số nhập vào là số lẻ hoặc là số âm, chương trình kết thúc
+
+7. xây dựng menu có các chức năng:
+    1. Nhập danh sách tên NY hàng tháng
+    2. xuất dánh sách
+    3. SX tên từ z -> a
+    4. Tìm kiếm NY tên "Minh"
+    5. Siêu thoát
+
