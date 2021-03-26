@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id=header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+
+    <h1 id="txt1">Truy xuất bằng id</h1>
+
+    <script type="text/javascript">
+        var x = document.getElementById('txt1'); 
+        // Truy xuất thẻ h1 có id 'txt1'
+        console.log(x);
+        x.innerHTML = "Thay đổi";
+        //Thay đổi nội dung của thẻ h1
+    </script>
+
+
+    <h1 id="txt1">Truy xuất bằng TagName</h1>   
+    <script type="text/javascript">
+        var x = document.getElementsByTagName('h1');
+        //Truy xuất các thẻ có TagName là h1
+        x[1].innerHTML = 'Thay đổi đi';
+        //Thay đổi nội dung của thẻ h1 đầu tiên trong html
+        
+    </script>
+
+    <!-- element.innerHTML  -->
+    <h4 id='h-4'> DOM Document</h4>
+    <script type="text/javascript">
+        x = document.getElementById('h-4');
+        //   x.innerHTML = 'Em cua ngay hom wa';
+        //   x.innerHTML = '<button>Click me</button>'
+    </script>
+
+    <!-- element.attribute -->
+    <a href="https://google.com">Google</a>
+    <script type="text/javascript">
+        x = document.getElementsByTagName('a');
+         x[3].href = 'http://youtube.com';
+    </script>
+
+    <!-- element.setAttribute(attribute,value) -->
+    <a href="https://google.com">Google</a>
+    <script type="text/javascript">
+        x = document.getElementsByTagName('a');
+        x[4].setAttribute('href', 'https://facebook.com');
+    </script>
+
+    <!-- element.style.property -->
+    <!-- <a href="https://google.com">Google</a>
+    <script type="text/javascript">
+        x = document.getElementsByTagName('a');
+        x[0].style.color = 'red';
+    </script> -->
+
+    <!-- <script>
+        let divA = document.getElementById("header")
+        console.log(divA);
+        let aList = divA.getElementsByTagName("a")
+        console.log("số thẻ a là : " + aList.lenght);
+
+</script> -->
+</body>
+
+</html>
