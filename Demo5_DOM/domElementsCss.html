@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .center{
+            text-align: center ;
+        }
+        .fontStyle{
+            font-size: larger;
+            font-style: italic;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id=header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+    <div class = "footer">
+        <p>Liên quân mobile</p>
+
+    </div>
+    <div class = "footer">
+        <p>Liên minh</p>
+        
+    </div>
+    <script>
+        let divHeader = document.getElementById("header")
+
+        let aList = document.getElementsByTagName("a")
+        console.log("số lượng thẻ a: " + aList.length)
+        
+        for (let i = 0 ; i < aList.length; i++){
+            aList[i].href = "https://google.com.vn"
+            aList[i].setAttribute("title", "Liên quân mobile")
+            console.log(aList[i].href);
+            console.log(aList[i].getAttribute("title"));
+
+            // aList[0].innerHTML = "<b> Home -> School</b>"
+            // aList[0].innerText = "<b>Home -> School là text</b>"
+
+        }
+        // let footerDiv = document.querySelectorAll("div.footer")
+        // console.log(footerDiv);
+        
+    </script>
+    <script>
+        let xList = document.getElementsByTagName("a")
+        for(let i = 0; i < xList.length; i++){
+            xList[i].style.color = "red"    
+            xList[i].style.fontSize = "40px"
+        }
+
+        let pList = document.getElementsByTagName("p")
+        // pList[0].classList = "center fontStyle"
+        // pList[0].className = "center fontStyle"
+        pList[0].setAttribute("class","center fontStyle")
+        // pList[0].setAttribute("class","center ")
+
+    </script>
+</body>
+</html>

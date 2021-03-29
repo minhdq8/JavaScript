@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script language="javascript">
+        // Hàm tính kết quả
+        function tinh() {
+            // Lấy 3 ô input
+            var a = document.getElementById("a");
+            var b = document.getElementById("b");
+            var result = document.getElementById("result");
+
+            // Tính tổng hai ô đầu tiên
+            var tong = parseInt(a.value) + parseInt(b.value);
+
+            // Gán giá trị vào ô thứ ba
+            // Phải kiểm tra tổng hai số này có bị lỗi hay không
+            if (!isNaN(tong)) {
+                result.value = tong;
+            }
+        }
+    </script>
+    a: <input type="text" id="a" value="" />
+    b: <input type="text" id="b" value="" />
+    <!-- b: <input type="text" id="b" value="" onkeyup="tinh()"/> -->
+
+    Kết quả: <input type="text" id="result" value="" />
+    <input type="button" value="Nhân" onclick="tinh()" id="object" />
+    <input type="button" value="Tổng" onclick="tinh()" id="object" />
+</body>
+
+</html>

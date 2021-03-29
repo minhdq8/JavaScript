@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script language="javascript">
+        // Hàm tính kết quả
+        
+        function tinhTong() {
+            var a = document.getElementById("a");
+            var b = document.getElementById("b");
+            var result = document.getElementById("result");
+
+            var tong = parseInt(a.value) + parseInt(b.value);
+            if (!isNaN(tong)) {
+                result.value = tong;
+            }
+        }
+        function tinhNhan() {
+            var a = document.getElementById("a");
+            var b = document.getElementById("b");
+            var result = document.getElementById("result");
+
+            var tich = parseInt(a.value) * parseInt(b.value);
+            if (!isNaN(tich)) {
+                result.value = tich;
+            }
+        }
+    </script>
+    Số a: <input type="text" id="a" value="" /><br></br>
+    Số b: <input type="text" id="b" value="" /><br></br>
+
+    Kết quả: <input type="text" id="result" value="" /><br></br>
+    <input type="button" value="Nhân" onclick="tinhNhan()" id="object" />
+    <input type="button" value="Tổng" onclick="tinhTong()" id="object" />
+</body>
+
+</html>
