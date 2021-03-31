@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .a {
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            color: black;
+            border: 2px solid #DC143C;
+        }
+
+        .a:hover {
+            background-color: cadetblue;
+            color: white;
+        }
+
+        .b {
+            width: 240px;
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>MÁY TÍNH</h1>
+    <form>
+        <input class="b" type="text" id="txtkq" /><br>
+        <br>
+        <input class="a" type="button" onClick="toan_hang(7)" Value="7" />
+        <input class="a" type="button" onClick="toan_hang(8)" Value="8" />
+        <input class="a" type="button" onClick="toan_hang(9)" Value="9" />
+        <input class="a" type="button" onClick="toan_tu('+')" Value="+" />
+        </br>
+        <input class="a" type="button" onClick="toan_hang(4)" Value="4" />
+        <input class="a" type="button" onClick="toan_hang(5)" Value="5" />
+        <input class="a" type="button" onClick="toan_hang(6)" Value="6" />
+        <input class="a" type="button" onClick="toan_tu('-')" Value="-" />
+        <br />
+        <input class="a" type="button" onClick="toan_hang(1)" Value="1" />
+        <input class="a" type="button" onClick="toan_hang(2)" Value="2" />
+        <input class="a" type="button" onClick="toan_hang(3)" Value="3" />
+        <input class="a" type="button" onClick="toan_tu('x')" Value="x" />
+        <br />
+        <input class="a" type="button" onClick="toan_hang(0)" Value="0" />
+        <input class="a" type="button" onClick="lam_lai()" Value="C" />
+        <input class="a" type="button" onClick="thuc_hien()" Value="=" />
+        <input class="a" type="button" onClick="toan_tu(':')" Value="/" />
+        <br />
+    </form>
+    <script>
+        var a = null,b = null,toan = null
+        function toan_hang(x) {
+            var kq = document.getElementById("txtkq").value; 
+            var so = kq + x
+            txtkq.value = so //gán gia trị lên txtkq
+        }
+        function toan_tu(t) {
+            a = document.getElementById("txtkq").value;
+            toan = t
+            document.getElementById("txtkq").value = ""
+        }
+        function lam_lai() {
+            a = null
+            b = null
+            toan = null
+            document.getElementById("txtkq").value = ""
+        }
+        function thuc_hien() {
+            b = document.getElementById("txtkq").value
+            switch (toan) {
+                case "+":
+                    var c = Number(a) + Number(b)
+                    document.getElementById("txtkq").value = c
+                    break;
+                case "-":
+                    var c = Number(a) - Number(b)
+                    document.getElementById("txtkq").value = c
+                    break;
+                case "x":
+                    var c = Number(a) * Number(b)
+                    document.getElementById("txtkq").value = c
+                    break;
+                case ":":
+                    var c = Number(a) / Number(b)
+                    document.getElementById("txtkq").value = c
+                    break;
+                default:
+                    alert(toan + " Không phải là toán tử")
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

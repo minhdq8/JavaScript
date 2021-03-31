@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id="message" value="" onkeyup="show_result()" />
+  <div id="result"></div>
+  <br></br>
+
+  <script language="javascript">
+    // Hàm show kết quả
+    function show_result() {
+      // Lấy hai thẻ HTML
+      var input = document.getElementById("message");
+      var div = document.getElementById("result");
+      // Gán nội dung ô input vào thẻ div
+      div.innerHTML = input.value;
+    }
+  </script>
+
+<br></br>
+  <div id="demo">Demo</div>
+  <!-- <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button> -->
+  <button onclick="this.innerHTML = Date()">The time is?</button>
+  <br></br>
+
+  <a href="#" onmouseover="changeColor(this)" 
+  onmouseout="this.style.color = 'green' ">Supper kill</a>
+
+  <script>
+    function changeColor(x) {
+      x.style.color = "red"
+    }
+  </script>
+  <br></br>
+  <input type="text" id="name" value="" onkeyup="upperCase(this)" />
+  <script>
+    function upperCase(x) {
+      let a = x.value
+      x.value = a.toUpperCase()  
+     }
+  </script>
+  <br></br>
+<!-- cách 2 / cách 3 xài addEvenlistener --> 
+<button id = "killButton">click to kill</button>
+<script>
+  let btKill = document.getElementById("killButton")
+  btKill.onclick = function() {
+    alert("you are murderer")
+  }
+</script>
+  
+
+
+</body>
+
+</html>
