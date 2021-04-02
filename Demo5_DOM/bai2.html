@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>iPhone9</td>
+            <td>$2700</td>
+            <td><button onclick="them(this);">Thêm</button></td>
+        </tr>
+        <tr>
+            <td>Samsung Star</td>
+            <td>$1500</td>
+            <td><button onclick="them(this);">Thêm</button></td>
+        </tr>
+        <tr>
+            <td>Nokia 2020</td>
+            <td>$1200</td>
+            <td><button onclick="them(this);">Thêm</button></td>
+        </tr>
+        <tr>
+            <td>Sony Xperia</td>
+            <td>$1700</td>
+            <td><button onclick="them(this);">Thêm</button></td>
+        </tr>
+    </table>
+    <h3>GIỎ HÀNG CỦA BẠN</h3>
+    <h3 id="empty">Bạn chưa chọn mặt hàng nào</h3>
+    <div id="not-empty" style="display:none;">
+        <table border="1" id="cart"></table>
+        <h3>TỔNG SỐ TIỀN: $<span id="tong">0</span></h3>
+    </div>
+</body>
+<script>
+    function them(button) {
+        //
+        var row = button.parentElement.parentElement.cloneNode(true);
+
+        var btnXoa = row.getElementsByTagName("button")[0];
+        btnXoa.innerText = "Xóa";
+        btnXoa.setAttribute('onclick', 'xoa()');
+        document.getElementById("cart").appendChild(row);
+        tinhTong();
+    }
+
+    function xoa(button) {
+        var row = button.parentElement.parentElement;
+        document.getElementById("cart").removeChild(row);
+        tinhTong();
+    }
+
+    function tinhTong() {
+        var cart = document.getElementById("cart");
+        var rows = cart.getElementsByTagName("tr");
+        var tong = 0;
+        for (var i = 0; i < rows.length; i++) {
+            var cells = rows[i].getElementsByTagName("td");
+            var price = cells[1].innerText.substr(1);
+            tong += 1*price;
+        }
+        document.getElementById("tong").innerText = tong;
+
+        document.getElementById("empty").style.display = (tong > 0) ? "none" : "";
+        document.getElementById("not-empty").style.display = (tong > 0) ? "" : "none";
+        document.getElementById("tong").style.backgroundColor = (tong > 6000) ? "yellow" : "";
+    }
+</script>
+</html>

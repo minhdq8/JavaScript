@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="demo">
+        <p id="p1">Thằng cha</p>
+        <p id="p2">Nóc nhà</p>
+        <p id="p3">ăn cám</p>
+
+    </div>
+
+    <script>
+        let parent = document.getElementById("demo");
+        let child = document.getElementById("p1");
+        // parent.removeChild(child);
+
+        //   let child = document.getElementById("p1");
+        let p3 = document.getElementById("p3");
+        // p3.parentNode.removeChild(child);
+
+        // thay thế 1 phần tử
+        let p = document.createElement("p");
+        p.innerText = 'Đây là người thứ 3';
+
+        let parent1 = document.getElementById("demo");
+        let child1 = document.getElementById("p2");
+        parent1.replaceChild(p, child1);
+    </script>
+
+</body>
+
+</html>

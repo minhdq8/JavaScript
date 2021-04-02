@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id=header>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+
+    </div>
+
+    <div class="footer">
+        <p>Liên minh</p>
+
+        <ul id="list">
+            <!-- a list item -->
+            <li>Item1</li>
+            <li>Item2</li>
+        </ul>
+
+        <script>
+            let ulElement = document.getElementById('header').firstElementChild
+            console.log(ulElement);
+
+            let li = document.createElement('li')
+            let a = document.createElement('a')
+            a.href = "https://caodang.fpt.edu.vn/"
+            a.innerHTML = 'Vip pro'
+
+            li.appendChild(a); // dưới cùng
+            // ulElement.appendChild(li);
+            ulElement.prepend(li); // lên trên cùng
+
+            // letFirstElement = ulElement.firstElementChild
+            // console.log('-----' + letFirstElement);
+            // console.log('=====' + ulElement.children[0]);
+            // letLastElement = ulElement.lastElementChild
+
+            // ulElement.replaceChild(letFirstElement,ulElement.children[2])
+        </script>
+        <script>
+            //  var list = document.getElementById("list");
+            // console.log("First child value is",list.firstChild);
+            // console.log("First element child value is",list.firstElementChild);
+        </script>
+
+    </div>
+    <div id="demo">Ví con nhà bà dụ</div>
+    <button onclick="add_child()">KẾT QUẢ</button>
+    <script>
+        function add_child() {
+            //tạo phần tử p    
+            let p = document.createElement("p");
+            //tạo phần tử text
+            let node = document.createTextNode("Viết gì chả được má");
+            //gắn node vào p
+            p.appendChild(node);
+
+            //Thay đổi một số thuộc tính của p
+            p.style.backgroundColor = 'red';
+            p.style.padding = "10px";
+            p.style.color = "white";
+
+            let div = document.getElementById("demo");
+            //gắn p vào div, Thêm node con vào node 
+            div.appendChild(p);
+
+        }
+    </script>
+
+</body>
+
+</html>
+
+<!-- Tạo phần tử
+có thể dùng JavaScript để tạo mới phần từ HTML sau đó chèn vào trang web:
+
+document.createElement(tag_name)	tạo ra phần tử có thẻ tag_name như a, p, div ...
+element.cloneNode()	Tạo ra một phần tử bằng cách nhân bản phần tử (element)
+document.createTextNode(text)	tạo phần tử tử văn bản text HTML 
+
+->> gắn phần tử đó vào HTML document để nó là phần tử con của một phần tử nào đó, 
+có một số cách để gắn phần tử tạo ra từ JavaScript vào DOM HTML
+
+element.appendChild(newNode)	Thêm phần tử newNode vào phần tử element nó trở thành phần tử con sau cùng của element
+element.insertBefore(newNode, node2)	Chèn phần tử newNode nằm phía trước node2
+element.replaceChild(newNode, oldNode)	Thay thế phần tử oldNode bằng phần tử newNode
+
+-->
