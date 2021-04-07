@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var over = new Image();
+		var out = new Image();
+		function load(){
+			over.src = "Anh/2.JPG";
+			out.src = "Anh/1.JPG";
+		}
+		function mOver(){
+			var anh = document.getElementById('anh');
+			anh.src = over.src;
+		}
+		function mOut(){
+			var anh = document.getElementById('anh');
+			anh.src = out.src;
+		}
+	</script>
+</head>
+<body onload="load()">
+	<img src="Anh/0.JPG" id="anh" onmouseover="mOver()" onmouseout="mOut()">
+</body>
+</html>

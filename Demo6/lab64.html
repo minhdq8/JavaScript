@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body style="text-align: center;">
+	<h1>Form đăng kí</h1>
+<form onsubmit="return kiem_tra()">
+	Họ: <input type="text" name="" id="ho" value=""><br><br>
+	Tên: <input type="text" name="" id="ten" value=""><br>
+	
+	<p>
+		<label>Ngày sinh:</label>
+		<label>Ngày:</label>
+		<select id="ngay">
+			<option value=""></option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+
+		<label>Tháng:</label>
+		<select id="thang">
+			<option value=""></option>
+			<option value="1">1</option>
+			<option value="1">2</option>
+			<option value="1">3</option>
+			<option value="1">4</option>
+			<option value="1">5</option>
+			<option value="1">6</option>
+			<option value="1">7</option>
+			<option value="1">8</option>
+			<option value="1">9</option>
+			<option value="1">10</option>
+		</select>
+
+		<label>Năm:</label>
+		<select id="nam">
+			<option value=""></option>
+			<option value="1">1</option>
+			<option value="1">2</option>
+			<option value="1">3</option>
+			<option value="1">4</option>
+			<option value="1">5</option>
+			<option value="1">6</option>
+			<option value="1">7</option>
+			<option value="1">8</option>
+			<option value="1">9</option>
+			<option value="1">10</option>
+		</select>
+	</p>
+
+	<p>
+		Giới tính:
+		<input type="radio" name="gioitinh" value="Nam">NAm
+		<input type="radio" name="gioitinh" value="Nữ">Nữ
+	</p>
+
+	<p>
+		Số điện thoại: 
+		<input type="text" name="" id="dienthoai">
+	</p>
+
+	<p>
+		Sở thích:
+		<input type="checkbox" name="sothich" onclick="hien_thi(false)">Mua sắm
+		<input type="checkbox" name="sothich" onclick="hien_thi(false)">Đi bộ
+		<input type="checkbox" name="sothich" onclick="hien_thi(false)">Du lịch
+		<input type="checkbox" name="sothich" onclick="hien_thi(false)">Câu cá
+		<input type="checkbox" name="sothich" onclick="hien_thi(false)">Picnic
+		<input type="checkbox" name="sothich" onclick="hien_thi(false)" >Mua sắm
+		<input type="checkbox" name="sothich" onclick="hien_thi(true)">Sở thích khác
+	</p>
+
+	<p id="phi_vc" style="display:none">
+            <label>Ý kiến:</label>
+            <input value=""/>
+    </p>
+<hr>
+	<p>
+		<button>Đăng kí</button>
+	</p>
+
+	
+</form>
+
+<script type="text/javascript" src="js.js"></script>
+</body>
+</html>

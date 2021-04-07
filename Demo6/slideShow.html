@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var img = [];
+		function load(){
+			for (var i = 0; i < 6; i++) {
+	    		img[i] = new Image();
+	   			img[i].src = "Anh/" + i + ".JPG";
+			}
+		}
+		let index = 0; 
+		function pre(){
+			let anh = document.getElementById("anh");
+			if (index > 0) {
+				index--;
+				anh.src = img[index].src;
+			}
+		}	
+		function next(){
+			let anh = document.getElementById("anh");
+			if (index < img.length) {
+				index++;
+				anh.src = img[index].src;
+			}else{
+				anh.src = img[0].src;
+			}
+			// if(index >= img.length) {
+			// 	index = 0;
+			// 	anh.src = img[index].src;
+    		// }
+		}	
+		function first(){
+			let anh = document.getElementById('anh');
+			let index = 0;
+			anh.src = img[index].src;
+		} 
+		function last(){
+			let anh = document.getElementById('anh');
+			let index = img.length - 1;
+			anh.src = img[index].src;
+		}
+	</script>
+</head>
+<body onload="load()">
+	<img src="Anh/0.JPG" id="anh">
+	<button onclick="first()">First</button>
+	<button onclick="pre()">Pre</button>
+	<button onclick="next()">Next</button>
+	<button onclick="last()">Last</button>
+</body>
+</html>
