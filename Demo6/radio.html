@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <br><br><br><br>
-
         <div>
             Giới tính:
-            <input id = "male" type="radio" name="gender" value="Male" onclick="showInfo()">Nam xịn
-            <input id = "female" type="radio" name="gender" value="FeMale" onclick="showInfo()">Nữ chuẩn
+            <input id = "male" type="radio" name = "minh" value="Male" onclick="showInfo()">Nam xịn
+            <input id = "female" type="radio" name = "minh" value="FeMale" onclick="showInfo()">Nữ chuẩn
         </div>
         <div id="divmale" style="display:none">
             <p>Nam thì khuyến mãi sửa tắm toàn thân</p>
@@ -25,14 +24,15 @@
 <body>
     <script>
         // function showInfo(){
-        // var chkYes = document.getElementById("male");
-        // var dvPassport = document.getElementById("divmale");
-        // dvPassport.style.display = chkYes.checked ? "block" : "none";
+        // var a = document.getElementById("male");
+        // var b = document.getElementById("divmale");
+        // b.style.display = a.checked ? "block" : "none";
 
 		// }
         
         let maleElemetRadio = document.getElementById("male")
         let femaleElemetRadio = document.getElementById("female")
+
         let maleElementDiv = document.getElementById("divmale")
         let femaleElementDiv = document.getElementById("divfemale")
 
@@ -40,7 +40,6 @@
             if(this.checked){
                 maleElementDiv.style.display = "block"
                 femaleElementDiv.style.display = "none"
-
             }
         }
         femaleElemetRadio.onchange = function(){
@@ -49,6 +48,7 @@
                 maleElementDiv.style.display = "none"
             }
         }
+
 
     </script>
 </body>

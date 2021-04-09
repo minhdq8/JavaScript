@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <form id = "add-user">
+            <div>
+                Username: <input type="text" id="username" /><br><br>
+            </div>
+            <div>
+                Password: <input type="password" id="pass" /><br><br>
+            </div>
+            <div>
+                <button type="submit" onclick="nem()" id = "submit_Button">Add</button>
+            </div>
+            
+        </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th> Name</th>
+                        <th> Password</th>
+                    </tr>
+                </thead>
+                <tbody id="body-table">
+                    <tr>
+                        <td>JS</td>
+                        <td>123</td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    <script>
+        let jsonObject = [
+            {
+                name: 'java xờ cờ ríp',
+                password: '123'
+            },
+            {
+                name: 'java numberone',
+                password: '123'
+            },
+            {
+                name: 'java pờ rào',
+                password: '123'
+            }
+        ]
+        // for (let i = 0; i < jsonObject.length; i++){
+        // let trElement = document.createElement('tr')
+
+        // let tdElement1 = document.createElement('td')
+        // tdElement1.innerHTML = jsonObject[i].name
+        // let tdElement2 = document.createElement('td')
+        // tdElement2.innerHTML = jsonObject[i].password
+
+        // trElement.appendChild(tdElement1)
+        // trElement.appendChild(tdElement2)
+
+        // let tdBody = document.getElementById('body-table')
+        // tdBody.appendChild(trElement)
+        // }
+
+        // let trElement = document.createElement('tr')
+
+        // let tdElement1 = document.createElement('td')
+        // tdElement1.innerHTML = "java1"
+        // let tdElement2 = document.createElement('td')
+        // tdElement2.innerHTML = "123"
+
+        // trElement.appendChild(tdElement1)
+        // trElement.appendChild(tdElement2)
+
+        // let tdBody = document.getElementById('body-table')
+        // tdBody.appendChild(trElement)
+
+
+
+        let summitButon = document.getElementById('submit_Button')
+        let usernameElement = document.getElementById('username')
+        let passElement = document.getElementById('pass')
+        
+        function nem(){
+            let uName = usernameElement.value;
+            let pass = passElement.value;
+
+            let Acc = {
+                name : uName,
+                password : pass
+            }
+            creatTR(Acc)
+        }
+        // summitButon.onclick = function(){
+        //     let uName = usernameElement.value;
+        //     let pass = passElement.value;
+
+        //     let Acc = {
+        //         name : uName,
+        //         password : pass
+        //     }
+        //     creatTR(Acc)
+        // }
+        // for(let i = 0; i < jsonObject.length; i++){
+        //     creatTR(jsonObject[i])
+        // }
+        function creatTR(TaiKhoan){
+            trElement = document.createElement('tr')
+
+            let tdElement1 = document.createElement('td')
+            tdElement1.innerHTML = TaiKhoan.name
+            let tdElement2 = document.createElement('td')
+            tdElement2.innerHTML = TaiKhoan.password
+
+            trElement.appendChild(tdElement1)
+            trElement.appendChild(tdElement2)
+
+            let tdBody = document.getElementById('body-table')
+            tdBody.appendChild(trElement)
+        }
+    </script>
+</body>
+
+</html>

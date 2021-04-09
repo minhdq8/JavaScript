@@ -9,16 +9,16 @@
  
              if(u== "") {
                  alert("Please enter your Username");
+                //  document.getElementById("username").style.backgroundColor = "red" 
                  return false;
              }
-             if(p == "") {
+             if(p.length < 6) {
                  alert("Please enter you Password");
                  return false;
              }
- 
              alert("All datas are valid!, send it to the server!")
- 
              return true;
+  
          }
       </script>
    </head>
