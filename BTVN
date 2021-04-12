@@ -72,6 +72,7 @@ Tạo 4 nút slideShow cho 5 ảnh
 Khi click thì hiển thị nội dung: anh yêu + tên NYC
 
 *Link nộp bài giỏ hàng lab 5 + bài 10, 11
+https://driveuploader.com/upload/VFqkECFl27/
 
 
 12. valide form thông tin tài khoản
@@ -82,6 +83,9 @@ tiền: phải là số ( min 1 đồng)
 Button thêm: 
 Button view -> Mở sang 1 trang mới, show toàn bộ thông tin tài khoản
 Ở trang thông tin tài khoảng có Button BACK để quay về trang thêm.
+
+* link check theo form
+https://www.javatpoint.com/javascript-form-validation
 
 
 

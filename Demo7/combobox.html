@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <p>
+        <label>Quốc gia
+        </label>
+        <select name="country" id="quocgia">
+            <option selected="" value="Default">(Hãy chọn Quốc gia)</option>
+            <option value="VI">Việt Nam</option>
+            <option value="CA">Canada</option>
+            <option value="IN">India</option>
+            <option value="RU">Russia</option>
+            <option value="US">USA</option>
+        </select>
+    </p>
+    <div style="width: 100%;position: relative"><input class="button" type="submit" name="submit" value="Submit" /></div>
+    
+</head>
+
+<body>
+    <script>
+        
+        var qg = document.getElementById('quocgia');
+        if (qg.value.length >= 3) {
+            alert('Không để trống quốc gia!');
+            qg.focus();
+            return false;
+        } else{
+            alert  ('OK done')
+        }
+
+    </script>
+</body>
+
+</html>
