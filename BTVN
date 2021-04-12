@@ -57,6 +57,11 @@ https://driveuploader.com/upload/VFfYXNGRHE/
 16	oncut	Xảy ra khi bạn cắt nội dung của thẻ
 17	onpaste	Xảy ra khi bạn dán nội dung vào thẻ
 
+Ví dụ: 
+https://www.w3schools.com/js/tryit.asp?filename=tryjs_form_radio
+https://www.w3schools.com/howto/howto_js_display_checkbox_text.asp
+https://www.w3schools.com/howto/howto_js_password_validation.asp
+
 9. test 10p
 https://driveuploader.com/upload/9hnugrJcFN/
 
@@ -68,12 +73,16 @@ Khi click thì hiển thị nội dung: anh yêu + tên NYC
 
 *Link nộp bài giỏ hàng lab 5 + bài 10, 11
 
+
 12. valide form thông tin tài khoản
 user: min 5 chữ cái
-pass: thay đổi màu theo độ mạnh mật khẩu ( vàng 5, cam 8, đỏ 10)
+pass: thay đổi màu theo độ mạnh mật khẩu ( vàng 5 ký tự, cam 8, đỏ 10)
 tiền: phải là số ( min 1 đồng)
-Nhập thêm: 
-Bt thêm: 
+
+Button thêm: 
+Button view -> Mở sang 1 trang mới, show toàn bộ thông tin tài khoản
+Ở trang thông tin tài khoảng có Button BACK để quay về trang thêm.
+
 
 
 
