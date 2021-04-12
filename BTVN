@@ -68,6 +68,12 @@ Khi click thì hiển thị nội dung: anh yêu + tên NYC
 
 *Link nộp bài giỏ hàng lab 5 + bài 10, 11
 
+12. valide form thông tin tài khoản
+user: min 5 chữ cái
+pass: thay đổi màu theo độ mạnh mật khẩu ( vàng 5, cam 8, đỏ 10)
+tiền: phải là số ( min 1 đồng)
+Nhập thêm: 
+Bt thêm: 
 
 
 

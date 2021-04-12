@@ -86,7 +86,8 @@
         let usernameElement = document.getElementById('username')
         let passElement = document.getElementById('pass')
         
-        function nem(){
+        document.getElementById('submit_Button').addEventListener('click',function(event){
+            event.preventDefault()
             let uName = usernameElement.value;
             let pass = passElement.value;
 
@@ -95,7 +96,17 @@
                 password : pass
             }
             creatTR(Acc)
-        }
+        })
+        // function nem(){
+        //     let uName = usernameElement.value;
+        //     let pass = passElement.value;
+
+        //     let Acc = {
+        //         name : uName,
+        //         password : pass
+        //     }
+        //     creatTR(Acc)
+        // }
         // summitButon.onclick = function(){
         //     let uName = usernameElement.value;
         //     let pass = passElement.value;
